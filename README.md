@@ -2,14 +2,15 @@
 
 Prototype **pré-alpha web** de SnikyTheGame orienté **runner**.
 
-## Analyse des versions existantes du dépôt
+## Analyse du repository actuel
 
-Historique disponible actuellement:
+Historique Git disponible dans ce repo local:
 
-- `faee0c1` : commit initial avec README minimal.
-- `2237b57` : première web pré-alpha livrée en gameplay Snake.
+- `faee0c1` : commit initial du projet.
+- `85bd688` : première pré-alpha web runner (UI + logique de base).
 
-Cette itération corrige la direction produit: **SnikyTheGame est un runner**, donc le gameplay web est aligné sur un endless runner.
+Cette version améliore la pré-alpha en intégrant un rendu **sprite-like**,
+plusieurs obstacles, et une boucle de jeu plus lisible pour les tests gameplay.
 
 ## Lancer le projet
 
@@ -19,22 +20,24 @@ python3 -m http.server 4173
 
 Puis ouvrir: `http://localhost:4173`
 
-## Fonctionnalités actuelles (pré-alpha runner)
+## Fonctionnalités de la pré-alpha
 
 - Runner 2D jouable au clavier (saut, pause, reset).
-- Défilement, obstacles aléatoires, collisions et game over.
-- Score + distance + vitesse dynamique.
+- Sprites du joueur (run frame A/B + jump) et obstacles (rocher, pics, drone).
+- Obstacles variés (sol + aérien), collisions, game over.
+- Défilement avec parallax simple pour perception de vitesse.
+- Score + distance + vitesse + combo d’esquive.
 - Sauvegarde locale du meilleur score via `localStorage`.
 
 ## Contrôles
 
-- `Espace` / `Flèche haut` / `Z` : sauter.
+- `Espace` / `Flèche haut` / `Z` / `W` : sauter.
 - `P` : pause.
 - Boutons UI: démarrer / pause / recommencer.
 
 ## Prochaines étapes suggérées
 
-- Ajouter animation sprite du personnage.
-- Ajouter plusieurs types d’obstacles.
-- Intégrer sons et feedback hit/jump.
-- Ajouter écran titre + sélection difficulté.
+- Ajouter des animations plus fluides (sprite-sheet / interpolation).
+- Ajouter des bonus temporaires (shield, dash) et patterns d’obstacles.
+- Intégrer son/SFX (jump, hit, dodge combo).
+- Ajouter écran titre + menu difficulté + best times.

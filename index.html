@@ -10,16 +10,17 @@
     <main class="layout">
       <section class="panel">
         <h1>SnikyTheGame</h1>
-        <p class="tag">Pré-alpha Runner</p>
+        <p class="tag">Pré-alpha web runner</p>
         <p>
-          Prototype runner pour valider la sensation de vitesse, le saut et
-          l’évitement d’obstacles en navigateur.
+          Build orientée test gameplay: vitesse, lisibilité des obstacles,
+          sprites, et sensation de saut.
         </p>
 
         <div class="stats">
           <div><span>Score</span><strong id="score">0</strong></div>
           <div><span>Distance</span><strong id="distance">0 m</strong></div>
           <div><span>Vitesse</span><strong id="speed">1.0x</strong></div>
+          <div><span>Combo dodge</span><strong id="combo">x0</strong></div>
           <div><span>Meilleur score</span><strong id="best">0</strong></div>
           <div><span>État</span><strong id="state">Prêt</strong></div>
         </div>
@@ -31,13 +32,19 @@
         </div>
 
         <p class="help">
-          Contrôles: <strong>Espace / Flèche haut / Z</strong> pour sauter.
-          <br />Objectif: éviter les obstacles le plus longtemps possible.
+          Contrôles : <strong>Espace / Flèche haut / Z</strong> pour sauter,
+          <strong>P</strong> pour pause. <br />Évite les obstacles au sol et les
+          drones en hauteur.
         </p>
       </section>
 
       <section class="game-area">
-        <canvas id="game" width="960" height="360" aria-label="Terrain runner"></canvas>
+        <canvas
+          id="game"
+          width="960"
+          height="360"
+          aria-label="Terrain runner"
+        ></canvas>
       </section>
     </main>
 
