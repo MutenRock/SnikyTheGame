@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnikyTheGame — Web Pre-Alpha Runner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel">
+        <h1>SnikyTheGame</h1>
+        <p class="tag">Pré-alpha web runner</p>
+        <p>
+          Build orientée test gameplay: vitesse, lisibilité des obstacles,
+          sprites, et sensation de saut.
+        </p>
+
+        <div class="stats">
+          <div><span>Score</span><strong id="score">0</strong></div>
+          <div><span>Distance</span><strong id="distance">0 m</strong></div>
+          <div><span>Vitesse</span><strong id="speed">1.0x</strong></div>
+          <div><span>Combo dodge</span><strong id="combo">x0</strong></div>
+          <div><span>Meilleur score</span><strong id="best">0</strong></div>
+          <div><span>État</span><strong id="state">Prêt</strong></div>
+        </div>
+
+        <div class="controls">
+          <button id="start">Démarrer</button>
+          <button id="pause">Pause</button>
+          <button id="reset">Recommencer</button>
+        </div>
+
+        <p class="help">
+          Contrôles : <strong>Espace / Flèche haut / Z</strong> pour sauter,
+          <strong>P</strong> pour pause. <br />Évite les obstacles au sol et les
+          drones en hauteur.
+        </p>
+      </section>
+
+      <section class="game-area">
+        <canvas
+          id="game"
+          width="960"
+          height="360"
+          aria-label="Terrain runner"
+        ></canvas>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
